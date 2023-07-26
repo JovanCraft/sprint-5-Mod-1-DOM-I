@@ -80,3 +80,6 @@ firstHFour.style.textAlign = 'start'
 const secondHFour = hFourHeadings[1]
 secondHFour.textContent = "About"
 
+const roundImage = document.querySelector('#cta-img')
+roundImage.src = "http://localhost:9000/img/cta.png"
+
