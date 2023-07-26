@@ -52,12 +52,19 @@ codingStrip.src = siteContent['images']['accent-img']
 
 
 const links = document.querySelectorAll('nav a')
-links[0].textContent = siteContent['nav']['nav-item-1']
-links[1].textContent = siteContent['nav']['nav-item-2']
-links[2].textContent = siteContent['nav']['nav-item-3']
-links[3].textContent = siteContent['nav']['nav-item-4']
-links[4].textContent = siteContent['nav']['nav-item-5']
-links[5].textContent = siteContent['nav']['nav-item-6']
+// links[0].textContent = siteContent['nav']['nav-item-1']
+// links[1].textContent = siteContent['nav']['nav-item-2']
+// links[2].textContent = siteContent['nav']['nav-item-3']
+// links[3].textContent = siteContent['nav']['nav-item-4']
+// links[4].textContent = siteContent['nav']['nav-item-5']
+// links[5].textContent = siteContent['nav']['nav-item-6']
+
+
+const linkTextContent = Object.values(siteContent.nav)
+  links.forEach((link, i) => {
+  link.textContent = linkTextContent[i]
+})
+
 
 links.forEach(link => link.classList.add('italic'))
 
@@ -65,9 +72,7 @@ const ctaText = document.querySelector('.cta-text')
 
 const newHOne = document.createElement('h1')
 newHOne.textContent = siteContent['cta']['h1']
-newHOne.style.fontFamily = 'Bangers'
-newHOne.style.letterSpacing = '1px'
-newHOne.style.margin = '0'
+
 
 const button = document.querySelector('button')
 button.textContent = siteContent['cta']['button']
