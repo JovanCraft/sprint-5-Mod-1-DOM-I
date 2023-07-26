@@ -42,44 +42,53 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 console.log('project wired!')
 
 const logoImage = document.querySelector('#logo-img')
-logoImage.src = "http://localhost:9000/img/logo.png"
+logoImage.src = siteContent['images']['logo-img']
+
+const roundImage = document.querySelector('#cta-img')
+roundImage.src = siteContent['images']['cta-img']
+
+const codingStrip = document.querySelector('#middle-img')
+codingStrip.src = siteContent['images']['accent-img']
+
 
 const links = document.querySelectorAll('nav a')
-links[0].textContent = "Services"
-links[1].textContent = "Product"
-links[2].textContent = "Vision"
-links[3].textContent = "Features"
-links[4].textContent = "About"
-links[5].textContent = 'Contact'
+links[0].textContent = siteContent['nav']['nav-item-1']
+links[1].textContent = siteContent['nav']['nav-item-2']
+links[2].textContent = siteContent['nav']['nav-item-3']
+links[3].textContent = siteContent['nav']['nav-item-4']
+links[4].textContent = siteContent['nav']['nav-item-5']
+links[5].textContent = siteContent['nav']['nav-item-6']
 
 links.forEach(link => link.classList.add('italic'))
 
 const ctaText = document.querySelector('.cta-text')
 
 const newHOne = document.createElement('h1')
-newHOne.textContent = "DOM Is Awesome"
+newHOne.textContent = siteContent['cta']['h1']
 newHOne.style.fontFamily = 'Bangers'
 newHOne.style.letterSpacing = '1px'
 newHOne.style.margin = '0'
 
 const button = document.querySelector('button')
-button.textContent = "Get Started"
+button.textContent = siteContent['cta']['button']
 
 ctaText.prepend(newHOne)
 
-const codingStrip = document.querySelector('#middle-img')
-codingStrip.src = "http://localhost:9000/img/accent.png"
+const topContent = document.querySelector('.top-content')
+topContent.children[0].children[0].textContent = siteContent['main-content']['features-h4']
+topContent.children[0].children[1].textContent = siteContent['main-content']['features-content']
 
-const hFourHeadings = document.querySelectorAll('.text-content h4')
+topContent.children[1].children[0].textContent = siteContent['main-content']['about-h4']
+topContent.children[1].children[1].textContent = siteContent['main-content']['about-content']
 
-const firstHFour = hFourHeadings[0]
-firstHFour.textContent = "Features"
-firstHFour.style.textAlign = 'start'
+const bottomContent = document.querySelector('.bottom-content')
 
+const contact = document.querySelector('section.contact')
+contact.children[0].textContent = siteContent['contact']['contact-h4']
+contact.children[1].textContent = siteContent['contact']['address']
+contact.children[2].textContent = siteContent['contact']['phone']
+contact.children[3].textContent = siteContent['contact']['email']
 
-const secondHFour = hFourHeadings[1]
-secondHFour.textContent = "About"
-
-const roundImage = document.querySelector('#cta-img')
-roundImage.src = "http://localhost:9000/img/cta.png"
-
+const footerLink = document.querySelector('footer a')
+footerLink.textContent = siteContent.footer.copyright
+footerLink.classList.add('bold')
