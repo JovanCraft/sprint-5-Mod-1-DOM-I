@@ -40,3 +40,29 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+const logoImage = document.querySelector('#logo-img')
+logoImage.src = "http://localhost:9000/img/logo.png"
+
+const links = document.querySelectorAll('nav a')
+links[0].textContent = "Services"
+links[1].textContent = "Product"
+links[2].textContent = "Vision"
+links[3].textContent = "Features"
+links[4].textContent = "About"
+links[5].textContent = 'Contact'
+
+links.forEach(link => link.classList.add('italic'))
+
+const ctaText = document.querySelector('.cta-text')
+
+const newHOne = document.createElement('h1')
+newHOne.textContent = "DOM Is Awesome"
+newHOne.style.fontFamily = 'Bangers'
+newHOne.style.letterSpacing = '1px'
+newHOne.style.margin = '0'
+
+const button = document.querySelector('button')
+button.textContent = "Get Started"
+
+ctaText.prepend(newHOne)
