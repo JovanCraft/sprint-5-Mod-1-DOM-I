@@ -66,3 +66,17 @@ const button = document.querySelector('button')
 button.textContent = "Get Started"
 
 ctaText.prepend(newHOne)
+
+const codingStrip = document.querySelector('#middle-img')
+codingStrip.src = "http://localhost:9000/img/accent.png"
+
+const hFourHeadings = document.querySelectorAll('.text-content h4')
+
+const firstHFour = hFourHeadings[0]
+firstHFour.textContent = "Features"
+firstHFour.style.textAlign = 'start'
+
+
+const secondHFour = hFourHeadings[1]
+secondHFour.textContent = "About"
+
