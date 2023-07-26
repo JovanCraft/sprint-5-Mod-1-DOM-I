@@ -68,16 +68,17 @@ const linkTextContent = Object.values(siteContent.nav)
 
 links.forEach(link => link.classList.add('italic'))
 
-const ctaText = document.querySelector('.cta-text')
-
-const newHOne = document.createElement('h1')
-newHOne.textContent = siteContent['cta']['h1']
 
 
-const button = document.querySelector('button')
-button.textContent = siteContent['cta']['button']
+document.querySelector('.cta .cta-text h1').textContent = siteContent['cta']['h1']
 
-ctaText.prepend(newHOne)
+
+
+
+document.querySelector('.cta .cta-text button').textContent = siteContent['cta']['button']
+
+
+
 
 const topContent = document.querySelector('.top-content')
 topContent.children[0].children[0].textContent = siteContent['main-content']['features-h4']
