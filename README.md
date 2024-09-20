@@ -45,4 +45,4 @@ Inside `src/index.js` there is declared an object literal containing all the dat
 
 ## Submission Format
 
-* [ ] Submit a link to your github repo in canvas.
+* [x] Submit a link to your github repo in canvas.
