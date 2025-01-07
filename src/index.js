@@ -111,4 +111,3 @@ footerLink.classList.add('bold')
 
 
 
-
